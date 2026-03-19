@@ -25,7 +25,9 @@ export default function Navbar() {
 
     // Close menu when route changes
     useEffect(() => {
-        setIsMenuOpen(false);
+        if (isMenuOpen) {
+            setIsMenuOpen(false);
+        }
     }, [pathname]);
 
     return (

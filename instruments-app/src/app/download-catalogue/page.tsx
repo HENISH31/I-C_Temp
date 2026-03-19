@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, Download, Eye, ArrowRight } from 'lucide-react';
+import { FileText, Download, Eye } from 'lucide-react';
 import styles from './download.module.css';
 
 const CATALOGUES = [

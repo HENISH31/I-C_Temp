@@ -54,7 +54,7 @@ export default function AboutPage() {
                     <span className={styles.headerLabel}>Since 1973 · Vadodara, Gujarat</span>
                     <h1>Instruments & Controls</h1>
                     <p className={styles.headerSub}>
-                        Manufacturer of precision transformer protection devices — Buchholz Relays, Magnetic Oil Level Gauges & Accessories. Trusted by India's top transformer OEMs for over five decades. 
+                        Manufacturer of precision transformer protection devices — Buchholz Relays, Magnetic Oil Level Gauges & Accessories. Trusted by India&apos;s top transformer OEMs for over five decades. 
                         Strengthened by our sister concern, <strong>Mody & Associates</strong>.
                     </p>
                     {/* iOS stats row */}
@@ -136,7 +136,7 @@ export default function AboutPage() {
                     <div className={styles.sectionHeader}>
                         <span className={styles.sectionTag}>🏆 Clientele</span>
                         <h2>Trusted by Industry Leaders</h2>
-                        <p>Our products are installed in transformers built by India's foremost OEM manufacturers.</p>
+                        <p>Our products are installed in transformers built by India&apos;s foremost OEM manufacturers.</p>
                     </div>
                     <div className={styles.clientGrid}>
                         {CLIENTS.map(client => (
@@ -203,7 +203,7 @@ export default function AboutPage() {
                 <div className={styles.ctaCard}>
                     <span className={styles.sectionTag}>📞 Get In Touch</span>
                     <h2>Partner with 50 Years of Excellence</h2>
-                    <p>Whether you're sourcing for a new transformer project or need a reliable replacement — we're here to help.</p>
+                    <p>Whether you&apos;re sourcing for a new transformer project or need a reliable replacement — we&apos;re here to help.</p>
                     <div className={styles.ctaActions}>
                         <Link href="/contact" className={styles.primaryBtn}>Request a Quote</Link>
                         <Link href="/products" className={styles.secondaryBtn}>View Products</Link>

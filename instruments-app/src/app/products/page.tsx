@@ -3,11 +3,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence, useDragControls } from "framer-motion";
+import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import styles from "./products.module.css";
 
+interface Product {
+    id: string;
+    name: string;
+    category: string;
+    categoryColor: string;
+    emoji: string;
+    image: string;
+    link: string;
+    specs: string[];
+    description: string;
+    highlights: string[];
+}
+
 // ─── Complete Product Catalog (from IndiaMART) ───────────────────────────────
-const ALL_PRODUCTS = [
+const ALL_PRODUCTS: Product[] = [
     {
         id: "relay-gas-1",
         name: "Gas Operated Relay 1",
@@ -166,7 +179,7 @@ const CATEGORY_ICONS: Record<string, string> = {
 
 export default function ProductsPage() {
     const [activeCategory, setActiveCategory] = useState("All");
-    const [selectedProduct, setSelectedProduct] = useState<(typeof ALL_PRODUCTS)[0] | null>(null);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
     const [direction, setDirection] = useState(0); // -1 for left, 1 for right
     const tabBarRef = useRef<HTMLDivElement>(null);
 
@@ -192,7 +205,7 @@ export default function ProductsPage() {
     }, [activeCategory]);
 
     const swipeHandlers = {
-        onDragEnd: (event: any, info: any) => {
+        onDragEnd: (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
             const threshold = 50;
             if (info.offset.x < -threshold) {
                 // Swipe left -> Next category

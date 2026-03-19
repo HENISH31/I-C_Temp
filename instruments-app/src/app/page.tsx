@@ -59,7 +59,7 @@ export default function Home() {
       setHeroIndex((prev: number) => (prev + 1) % heroImages.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [heroImages.length]);
 
   return (
     <div className={`${styles.homeContainer} scan-background`}>

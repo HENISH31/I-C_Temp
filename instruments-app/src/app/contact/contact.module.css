@@ -1,0 +1,191 @@
+/* ───────────────────────────────────────────
+   contact.module.css — iOS 18 Liquid Glass
+─────────────────────────────────────────── */
+
+.contactPage {
+    padding-top: 80px;
+}
+
+/* Page header */
+.pageHeader {
+    background: rgba(215, 220, 230, 0.46);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.40);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.pageHeader h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.pageHeader p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Grid layout */
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: flex-start;
+}
+
+.contactInfo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.contactInfo p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.contactMethods {
+    margin-top: 3rem;
+    display: grid;
+    gap: 1.2rem;
+}
+
+/* Contact method row */
+.method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.method span {
+    font-size: 1.4rem;
+    background: rgba(215, 220, 230, 0.58);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 2px 8px rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
+}
+
+/* Contact form box */
+.formBox {
+    padding: 3rem;
+    background: rgba(215, 220, 230, 0.50) !important;
+    backdrop-filter: blur(40px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.55) !important;
+    border-radius: 28px !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.82),
+        0 8px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+.form {
+    display: grid;
+    gap: 1.8rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.formGroup label {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.86rem;
+    letter-spacing: 0.01em;
+}
+
+/* iOS-style inputs */
+.formGroup input,
+.formGroup textarea {
+    padding: 0.9rem 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 14px;
+    background: rgba(230, 234, 242, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: var(--transition-smooth);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: rgba(0, 122, 255, 0.55);
+    background: rgba(232, 236, 246, 0.70);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.75),
+        0 0 0 3px rgba(0, 122, 255, 0.14);
+}
+
+/* Submit button */
+.submitBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(0, 122, 255, 0.88);
+    color: #fff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.36),
+        0 3px 12px rgba(0, 122, 255, 0.28);
+    cursor: pointer;
+    transition: all 0.35s var(--ease-apple);
+    letter-spacing: -0.01em;
+    width: 100%;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 8px 24px rgba(0, 122, 255, 0.38);
+    background: rgba(0, 100, 230, 0.94);
+}
+
+@media (max-width: 768px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .pageHeader h1 {
+        font-size: 2.4rem;
+    }
+
+    .formBox {
+        padding: 2rem 1.5rem;
+    }
+}

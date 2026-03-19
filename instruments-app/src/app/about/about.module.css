@@ -1,0 +1,675 @@
+/* ────────────────────────────────────────────────
+   about.module.css — iOS 18 Liquid Glass Theme
+──────────────────────────────────────────────── */
+
+.aboutPage {
+    padding-top: 80px;
+    min-height: 100vh;
+}
+
+/* ── Hero Header ─────────────────────────────── */
+.pageHeader {
+    background: rgba(215, 220, 230, 0.50);
+    backdrop-filter: blur(50px) saturate(180%);
+    -webkit-backdrop-filter: blur(50px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.80);
+    padding: 6rem 1.5rem 5rem;
+    text-align: center;
+}
+
+.headerInner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.headerLabel {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #007AFF;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+    margin-bottom: 1.2rem;
+    padding: 0.35rem 1rem;
+    background: rgba(0, 122, 255, 0.10);
+    border: 1px solid rgba(0, 122, 255, 0.20);
+    border-radius: 50px;
+}
+
+.pageHeader h1 {
+    font-size: 3.6rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--text-primary);
+    margin: 0 0 1.2rem;
+    line-height: 1.05;
+}
+
+.headerSub {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+}
+
+/* iOS-style stats pill row */
+.statsRow {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.statPill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    background: rgba(215, 220, 230, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 18px;
+    padding: 1rem 1.6rem;
+    min-width: 110px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.80),
+        0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.statValue {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #007AFF;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.70rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+/* ── Section Layout ──────────────────────────── */
+.section {
+    padding: 5rem 1.5rem;
+}
+
+.altSection {
+    background: rgba(215, 220, 230, 0.28);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255, 255, 255, 0.34);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.sectionInner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.sectionHeader h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    margin: 0.5rem 0 1rem;
+}
+
+.sectionHeader p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sectionTag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #007AFF;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-bottom: 0.6rem;
+    background: rgba(0, 122, 255, 0.10);
+    border: 1px solid rgba(0, 122, 255, 0.18);
+    border-radius: 50px;
+    padding: 0.28rem 0.85rem;
+}
+
+/* ── Company Overview ────────────────────────── */
+.overviewGrid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.overviewText .sectionTag {
+    margin-bottom: 1rem;
+}
+
+.overviewText h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.overviewText p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+}
+
+.overviewText p strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Factsheet Card */
+.factCard {
+    background: rgba(215, 220, 230, 0.52);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 24px;
+    padding: 2rem 2.2rem;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.82),
+        0 8px 32px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 100px;
+}
+
+.factCardHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.factCardIcon {
+    font-size: 1.6rem;
+}
+
+.factCardHeader h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.factList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.factList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.factList li span {
+    color: var(--text-muted);
+    font-weight: 500;
+    flex-shrink: 0;
+    min-width: 110px;
+}
+
+.factList li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ── Team ────────────────────────────────────── */
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.teamCard {
+    background: rgba(215, 220, 230, 0.52);
+    backdrop-filter: blur(36px) saturate(180%);
+    -webkit-backdrop-filter: blur(36px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.56);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.82),
+        0 6px 24px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.35s var(--ease-apple);
+}
+
+.teamCard:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.88),
+        0 14px 40px rgba(0, 0, 0, 0.10);
+    border-color: rgba(255, 255, 255, 0.72);
+}
+
+.teamAvatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    background: rgba(0, 122, 255, 0.12);
+    border: 1px solid rgba(0, 122, 255, 0.22);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.70);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.teamName {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.teamRole {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #007AFF;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.teamQual {
+    font-size: 0.80rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ── Clientele ───────────────────────────────── */
+.clientGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.clientCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(215, 220, 230, 0.50);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 18px;
+    padding: 1.2rem 1.5rem;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.78),
+        0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.30s var(--ease-apple);
+}
+
+.clientCard:hover {
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.72);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.clientIcon {
+    font-size: 1.4rem;
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 122, 255, 0.10);
+    border: 1px solid rgba(0, 122, 255, 0.20);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.70);
+}
+
+.clientInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.clientInfo strong {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.clientInfo span {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ── Testing ─────────────────────────────────── */
+.testingGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.testCard {
+    background: rgba(215, 220, 230, 0.52);
+    backdrop-filter: blur(36px) saturate(180%);
+    -webkit-backdrop-filter: blur(36px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.56);
+    border-radius: 22px;
+    padding: 2rem 2rem 2rem;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.80),
+        0 6px 22px rgba(0, 0, 0, 0.07);
+}
+
+.testArea {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #007AFF;
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.testList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.testList li {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.90rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.testDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #007AFF;
+    flex-shrink: 0;
+}
+
+/* ── Machines ────────────────────────────────── */
+.machineGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.machineCard {
+    background: rgba(215, 220, 230, 0.50);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.78),
+        0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: all 0.30s var(--ease-apple);
+}
+
+.machineCard:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.70);
+}
+
+.machineIcon {
+    font-size: 2rem;
+    width: 56px;
+    height: 56px;
+    background: rgba(0, 122, 255, 0.10);
+    border: 1px solid rgba(0, 122, 255, 0.18);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.70);
+}
+
+.machineName {
+    font-size: 0.90rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+}
+
+.machineDetail {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ── CTA Section ─────────────────────────────── */
+.ctaSection {
+    padding: 4rem 1.5rem 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.ctaCard {
+    max-width: 720px;
+    width: 100%;
+    background: rgba(215, 220, 230, 0.52);
+    backdrop-filter: blur(50px) saturate(180%);
+    -webkit-backdrop-filter: blur(50px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 28px;
+    padding: 4rem 3.5rem;
+    text-align: center;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        0 12px 48px rgba(0, 0, 0, 0.09);
+}
+
+.ctaCard h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    margin: 0.6rem 0 1.2rem;
+    line-height: 1.1;
+}
+
+.ctaCard p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2.2rem;
+}
+
+.ctaActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.primaryBtn {
+    background: rgba(0, 122, 255, 0.90);
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.36),
+        0 4px 14px rgba(0, 122, 255, 0.30);
+    transition: all 0.28s var(--ease-apple);
+    letter-spacing: -0.01em;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 122, 255, 0.40);
+    background: rgba(0, 100, 230, 0.94);
+}
+
+.secondaryBtn {
+    background: rgba(215, 220, 230, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: var(--text-primary);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.78),
+        0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.28s var(--ease-apple);
+    letter-spacing: -0.01em;
+}
+
+.secondaryBtn:hover {
+    transform: translateY(-1px);
+    background: rgba(210, 215, 228, 0.72);
+}
+
+.gstNote {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin: 0 !important;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 1024px) {
+    .overviewGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .factCard {
+        position: static;
+    }
+
+    .teamGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .machineGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pageHeader h1 {
+        font-size: 2.5rem;
+    }
+
+    .headerSub {
+        font-size: 1rem;
+    }
+
+    .statsRow {
+        gap: 0.6rem;
+    }
+
+    .statPill {
+        min-width: 88px;
+        padding: 0.8rem 1rem;
+    }
+
+    .statValue {
+        font-size: 1.5rem;
+    }
+
+    .overviewText h2 {
+        font-size: 2rem;
+    }
+
+    .sectionHeader h2 {
+        font-size: 2rem;
+    }
+
+    .teamGrid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .clientGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .testingGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .machineGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .ctaCard {
+        padding: 3rem 1.8rem;
+    }
+
+    .ctaCard h2 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .machineGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .ctaActions {
+        flex-direction: column;
+    }
+}

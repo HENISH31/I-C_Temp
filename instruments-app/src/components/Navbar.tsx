@@ -23,17 +23,12 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Close menu when route changes
-    useEffect(() => {
-        if (isMenuOpen) {
-            setIsMenuOpen(false);
-        }
-    }, [pathname]);
-
     return (
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.navInner}>
-                <div className={`${styles.navContainer}`}>
+                <div className={styles.navContainer}>
+
+                    {/* Logo */}
                     <Link href="/" className={styles.logo}>
                         <Image
                             src="/ic_logo.png"
@@ -55,14 +50,15 @@ export default function Navbar() {
                         <Link href="/contact" className={`${styles.navLink} ${pathname === '/contact' ? styles.active : ''}`}>Contact Us</Link>
                     </div>
 
+                    {/* CTA Button */}
                     <Link href="/contact" className={`${styles.ctaButton} ${styles.desktopOnly}`}>
                         Get In Touch
                     </Link>
 
                     {/* Mobile Menu Toggle */}
-                    <button 
-                        className={styles.menuToggle} 
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    <button
+                        className={styles.menuToggle}
+                        onClick={() => setIsMenuOpen(prev => !prev)}
                         aria-label="Toggle Menu"
                     >
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,7 +69,7 @@ export default function Navbar() {
             {/* Mobile Drawer */}
             <AnimatePresence>
                 {isMenuOpen && (
-                    <motion.div 
+                    <motion.div
                         className={styles.mobileDrawer}
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -81,14 +77,55 @@ export default function Navbar() {
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
                     >
                         <div className={styles.mobileLinks}>
-                            <Link href="/" className={`${styles.mobileLink} ${pathname === '/' ? styles.mobileActive : ''}`}>Home</Link>
-                            <Link href="/products" className={`${styles.mobileLink} ${pathname === '/products' ? styles.mobileActive : ''}`}>Products</Link>
-                            <Link href="/download-catalogue" className={`${styles.mobileLink} ${pathname === '/download-catalogue' ? styles.mobileActive : ''}`}>Catalogues</Link>
-                            <Link href="/about" className={`${styles.mobileLink} ${pathname === '/about' ? styles.mobileActive : ''}`}>About Us</Link>
-                            <Link href="/contact" className={`${styles.mobileLink} ${pathname === '/contact' ? styles.mobileActive : ''}`}>Contact Us</Link>
-                            <Link href="/contact" className={styles.mobileCta}>
+
+                            <Link
+                                href="/"
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`${styles.mobileLink} ${pathname === '/' ? styles.mobileActive : ''}`}
+                            >
+                                Home
+                            </Link>
+
+                            <Link
+                                href="/products"
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`${styles.mobileLink} ${pathname === '/products' ? styles.mobileActive : ''}`}
+                            >
+                                Products
+                            </Link>
+
+                            <Link
+                                href="/download-catalogue"
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`${styles.mobileLink} ${pathname === '/download-catalogue' ? styles.mobileActive : ''}`}
+                            >
+                                Catalogues
+                            </Link>
+
+                            <Link
+                                href="/about"
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`${styles.mobileLink} ${pathname === '/about' ? styles.mobileActive : ''}`}
+                            >
+                                About Us
+                            </Link>
+
+                            <Link
+                                href="/contact"
+                                onClick={() => setIsMenuOpen(false)}
+                                className={`${styles.mobileLink} ${pathname === '/contact' ? styles.mobileActive : ''}`}
+                            >
+                                Contact Us
+                            </Link>
+
+                            <Link
+                                href="/contact"
+                                onClick={() => setIsMenuOpen(false)}
+                                className={styles.mobileCta}
+                            >
                                 Get In Touch
                             </Link>
+
                         </div>
                     </motion.div>
                 )}

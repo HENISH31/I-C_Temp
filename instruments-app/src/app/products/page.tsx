@@ -269,7 +269,7 @@ export default function ProductsPage() {
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
                             className={styles.appGrid}
                         >
-                            {filtered.map((product, idx) => (
+                            {filtered.map((product) => (
                                 <button
                                     key={product.id}
                                     className={styles.appIcon}

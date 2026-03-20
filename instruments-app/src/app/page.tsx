@@ -51,8 +51,8 @@ export default function Home() {
   useScrollReveal();
   useParallax();
 
-  const [heroIndex, setHeroIndex] = useState(0);
   const heroImages = ["/h1_transparent.png", "/h2_transparent.png"];
+  const [heroIndex, setHeroIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -105,6 +105,7 @@ export default function Home() {
                     height={700}
                     className={styles.heroImage}
                     priority
+                    unoptimized
                     style={{ objectFit: 'contain' }}
                   />
                 </motion.div>

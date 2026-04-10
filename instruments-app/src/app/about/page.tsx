@@ -6,9 +6,8 @@ import styles from "./about.module.css";
 
 // ── Real company data from IndiaMART ──────────────────────────────────────────
 const TEAM = [
-    { name: "J. M. Mody", role: "Co-Founder & Director", qual: "B.Sc. (Elec & Mech)", emoji: "👷" },
-    { name: "Manjula Manoj Mody", role: "CEO & Managing Partner", qual: "B.E. (Mechanical)", emoji: "🎯" },
-    { name: "Mrs. V. J. Mody", role: "Operations Director", qual: "Senior Management", emoji: "💼" },
+    { name: "Manoj Mody", role: "Co-Founder & Director", qual: "B.Sc. (Elec & Mech)", emoji: "👷" },
+    { name: "Manjula Manoj Mody", role: "CEO & Managing Partner", qual: "B.E. (Mechanical)", emoji: "🎯" }
 ];
 
 const CLIENTS = [
@@ -17,8 +16,7 @@ const CLIENTS = [
     { name: "Voltamp Transformers Ltd.", note: "Vadodara" },
     { name: "Patson Transformers P Ltd.", note: "" },
     { name: "Transformers & Electricals Kerala Ltd.", note: "TELK" },
-    { name: "Emco Transformers Ltd.", note: "Jalgaon & Thane" },
-    { name: "Hackbridge Hewittic & Easun Ltd.", note: "" },
+    { name: "Emco Transformers Ltd.", note: "Jalgaon & Thane" }
 ];
 
 const TESTING = [
@@ -40,7 +38,7 @@ const MACHINES = [
 const STATS = [
     { value: "1973", label: "Year Established" },
     { value: "50+", label: "Years of Expertise" },
-    { value: "7–8", label: "Skilled Employees" },
+    { value: "4-5", label: "Skilled Employees" },
     { value: "7+", label: "Major OEM Clients" },
 ];
 
@@ -76,15 +74,15 @@ export default function AboutPage() {
                         {/* Main story */}
                         <div className={styles.overviewText}>
                             <span className={styles.sectionTag}>🏭 Our Story</span>
-                            <h2>Engineering Precision<br />Since 1973</h2>
+                            <h2>Instruments & Control Since 1973</h2>
                             <p>
                                 Established in 1973 at the <strong>GIDC Makarpura Industrial Area, Vadodara</strong>, M/s Instruments & Controls has been a trusted name in transformer protection for over five decades. Managed by qualified and experienced engineers, we operate from our own manufacturing premises with a fully equipped factory.
                             </p>
                             <p>
-                                We are leading manufacturers of <strong>Buchholz Relays</strong>, <strong>Magnetic Oil Level Gauges (MOG)</strong>, <strong>Oil Surge Relays</strong>, and <strong>Silicagel Breathers</strong> — products installed in thousands of power transformers across India and internationally.
+                                We are leading manufacturers of <strong>Buchholz Relays</strong>, <strong>Magnetic Oil Level Gauges (MOG)</strong>, <strong>Oil Surge Relays</strong>, and <strong>Silica Gel Breathers (ABS Lids)</strong> — products installed in thousands of power transformers across India and internationally.
                             </p>
                             <p>
-                                As a <strong>Registered SSI Unit</strong> and member of the <strong>Vadodara Chamber of Commerce & Industry (VCCI)</strong>, we combine traditional craftsmanship with modern quality systems to deliver instruments that protect critical electrical infrastructure.
+                                As a member of the <strong>Vadodara Chamber of Commerce & Industry (VCCI)</strong>, we combine traditional craftsmanship with modern quality systems to deliver instruments that protect critical electrical infrastructure.
                             </p>
                         </div>
 
@@ -96,10 +94,10 @@ export default function AboutPage() {
                             </div>
                             <ul className={styles.factList}>
                                 <li><span>Nature of Business</span><strong>Manufacturer</strong></li>
-                                <li><span>Legal Status</span><strong>Partnership / Registered SSI</strong></li>
+                                <li><span>Legal Status</span><strong>Proprietorship</strong></li>
                                 <li><span>Established</span><strong>1973</strong></li>
                                 <li><span>CEO / MD</span><strong>Manjula Manoj Mody</strong></li>
-                                <li><span>Employees</span><strong>7 – 8 People</strong></li>
+                                <li><span>Employees</span><strong>4-5 People</strong></li>
                                 <li><span>Location</span><strong>146, GIDC Makarpura, Vadodara – 390010</strong></li>
                                 <li><span>GST No.</span><strong>24ACFPM7209L2ZF</strong></li>
                                 <li><span>Trade Body</span><strong>VCCI Member</strong></li>
@@ -202,7 +200,7 @@ export default function AboutPage() {
             <section className={styles.ctaSection}>
                 <div className={styles.ctaCard}>
                     <span className={styles.sectionTag}>📞 Get In Touch</span>
-                    <h2>Partner with 50 Years of Excellence</h2>
+                    <h2>50 Years of Excellence</h2>
                     <p>Whether you&apos;re sourcing for a new transformer project or need a reliable replacement — we&apos;re here to help.</p>
                     <div className={styles.ctaActions}>
                         <Link href="/contact" className={styles.primaryBtn}>Request a Quote</Link>

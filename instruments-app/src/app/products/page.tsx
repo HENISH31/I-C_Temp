@@ -46,8 +46,20 @@ const ALL_PRODUCTS: Product[] = [
         highlights: ["Weatherproof design", "High calibration accuracy", "Long service life"],
     },
     {
+        id: "relay-gas-3",
+        name: "Gas Operated Relay 3",
+        category: "Buchholz Relay",
+        categoryColor: "#007AFF",
+        emoji: "🛡️",
+        image: "/products-new/relay_gas_3.png",
+        link: "/contact",
+        specs: ["Superior sensitivity", "Universal mounting", "High-visibility level window", "Corrosion-resistant coating", "Vibration absorption system", "Integrated test valve"],
+        description: "Next-generation Gas Operated Relay featuring superior sensitivity and a universal mounting design. Optimized for extreme environmental conditions with a vibration-resistant housing and high-visibility monitoring window.",
+        highlights: ["Superior Sensitivity", "Universal Mounting", "Vibration Resistant"],
+    },
+    {
         id: "mog-so6",
-        name: "Magnetic Oil Level Gauge SO6",
+        name: "Magnetic Oil Level Gauge SO4",
         category: "Magnetic Oil Level Gauge",
         categoryColor: "#34C759",
         emoji: "📊",
@@ -59,7 +71,7 @@ const ALL_PRODUCTS: Product[] = [
     },
     {
         id: "mog-so4",
-        name: "Magnetic Oil Level Gauge SO4",
+        name: "Magnetic Oil Level Gauge SO6",
         category: "Magnetic Oil Level Gauge",
         categoryColor: "#34C759",
         emoji: "🎯",
@@ -107,7 +119,7 @@ const ALL_PRODUCTS: Product[] = [
     },
     {
         id: "product-4",
-        name: "Silica Gel Breathers 100 Gms",
+        name: "Silica Gel Breathers (ABS Lids) 100 Gms",
         category: "Transformer Parts",
         categoryColor: "#FF3B30",
         emoji: "💨",
@@ -119,7 +131,7 @@ const ALL_PRODUCTS: Product[] = [
     },
     {
         id: "product-5",
-        name: "Silica Gel Breathers 250 Gms",
+        name: "Silica Gel Breathers (ABS Lids) 250 Gms",
         category: "Transformer Parts",
         categoryColor: "#FF3B30",
         emoji: "💨",
@@ -131,7 +143,7 @@ const ALL_PRODUCTS: Product[] = [
     },
     {
         id: "product-6",
-        name: "Silica Gel Breathers 500 Gms",
+        name: "Silica Gel Breathers (ABS Lids) 500 Gms",
         category: "Transformer Parts",
         categoryColor: "#FF3B30",
         emoji: "💨",
@@ -143,7 +155,7 @@ const ALL_PRODUCTS: Product[] = [
     },
     {
         id: "product-7",
-        name: "Silica Gel Breathers 1 Kg",
+        name: "Silica Gel Breathers (ABS Lids) 1 Kg",
         category: "Transformer Parts",
         categoryColor: "#FF3B30",
         emoji: "💨",
@@ -155,7 +167,7 @@ const ALL_PRODUCTS: Product[] = [
     },
     {
         id: "product-8",
-        name: "Silica Gel Breathers 1.5 Kg",
+        name: "Silica Gel Breathers (ABS Lids) 1.5 Kg",
         category: "Transformer Parts",
         categoryColor: "#FF3B30",
         emoji: "💨",

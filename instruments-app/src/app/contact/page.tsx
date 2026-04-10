@@ -25,10 +25,13 @@ export default function ContactPage() {
                                     <span>📍</span> Vadodara, India
                                 </div>
                                 <div className={styles.method}>
-                                    <span>📧</span> info@instruments-controls.com
+                                    <span>📧</span> instrumentsncontrols@gmail.com
                                 </div>
                                 <div className={styles.method}>
-                                    <span>📞</span> +91 (265) 265-1234
+                                    <span>📧</span> modynassociates@gmail.com
+                                </div>
+                                <div className={styles.method}>
+                                    <span>📞</span> +91 9824433982, +91 98244 32113
                                 </div>
                             </div>
                         </div>

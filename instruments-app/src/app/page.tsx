@@ -11,8 +11,7 @@ import styles from './page.module.css';
 const CHAPTERS = [
   {
     id: "relay",
-    title: "The Heart of Protection",
-    product: "Buchholz Relays",
+    title: "Buchholz Relays",
     subtitle: "Precision Protection",
     tagline: "Global Standards Since 1973",
     description: "Industry-leading gas and oil operated protection devices for power transformers. Engineered for fail-safe performance in critical infrastructure.",
@@ -23,8 +22,7 @@ const CHAPTERS = [
   },
   {
     id: "mog",
-    title: "Unfailing Vigilance",
-    product: "Magnetic Oil Level Gauges",
+    title: "Magnetic Oil Level Gauges",
     subtitle: "Accurate Monitoring",
     tagline: "High Reliability Instrumentation",
     description: "High-precision magnetic indicators with remote alarm contacts. Constant monitoring for oil-filled power equipment.",
@@ -35,8 +33,7 @@ const CHAPTERS = [
   },
   {
     id: "breather",
-    title: "The Ultimate Shield",
-    product: "Silicagel Breathers",
+    title: "Silica Gel Breathers (ABS Lids)",
     subtitle: "Moisture Control",
     tagline: "Advanced Environmental Guard",
     description: "Next-generation moisture protection designed to significantly extend transformer life by maintaining oil purity.",
@@ -66,7 +63,7 @@ export default function Home() {
       {/* Cinematic Story Indicators */}
       <div className="story-indicator">
         {CHAPTERS.map((chapter) => (
-          <a key={chapter.id} href={`#${chapter.id}`} className="indicator-dot" title={chapter.product}></a>
+          <a key={chapter.id} href={`#${chapter.id}`} className="indicator-dot" title={chapter.title}></a>
         ))}
       </div>
 
@@ -76,8 +73,7 @@ export default function Home() {
           <div className={`${styles.heroText} glass`} style={{ padding: '3rem', transform: 'translateY(calc(var(--parallax-offset) * -0.5))' }}>
             <span className={styles.sectionLabel}>Since 1973</span>
             <h1 className={styles.heroTitle}>
-              Engineering <br />
-              <span className={styles.accent} style={{ color: CHAPTERS[0].color }}>Precision.</span>
+              Instruments & <span className={styles.accent} style={{ color: CHAPTERS[0].color }}>Control.</span>
             </h1>
             <p className={styles.heroSubtitle}>
               Manufacturing high-performance transformer protection and monitoring solutions for the global energy sector.
@@ -133,7 +129,6 @@ export default function Home() {
               <div className={`${styles.chapterInfo} ${styles.chapterInfoCard} glass`} data-parallax="0.08" style={{ transform: 'translateY(calc(var(--parallax-offset) * -1))' }}>
                 <span className={styles.sectionLabel} style={{ color: chapter.color }}>{chapter.tagline}</span>
                 <h2 className={styles.chapterTitle}>{chapter.title}</h2>
-                <h3 className={styles.productName}>{chapter.product}</h3>
                 <p className={styles.heroSubtitle}>{chapter.description}</p>
 
                 <div className={styles.chapterStats}>
@@ -152,7 +147,7 @@ export default function Home() {
                 <div className="float">
                   <Image
                     src={chapter.image}
-                    alt={chapter.product}
+                    alt={chapter.title}
                     width={600}
                     height={600}
                     className={styles.chapterProductImage}

@@ -57,8 +57,9 @@ export const Footer = () => {
             Gujarat, India
           </address>
           <p className={styles.contactInfo}>
-            Email: info@instruments-controls.com<br />
-            Phone: +91 (265) 265-1234
+            Email: instrumentsncontrols@gmail.com,<br />
+            modynassociates@gmail.com<br />
+            Phone: +91 9824433982, +91 98244 32113
           </p>
         </div>
       </div>

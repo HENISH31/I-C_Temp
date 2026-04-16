@@ -1,3 +1,4 @@
+/* eslint-disable no-inline-styles, react/no-inline-styles */
 "use client";
 
 import Image from 'next/image';
@@ -70,10 +71,12 @@ export default function Home() {
       {/* Chapter 1: Hero Story */}
       <section className={styles.hero}>
         <div className={`container ${styles.heroContent} cinematic-load`} data-parallax="0.05">
-          <div className={`${styles.heroText} glass`} style={{ padding: '3rem', transform: 'translateY(calc(var(--parallax-offset) * -0.5))' }}>
+          {/* eslint-disable jsx-a11y/no-inline-styles, react/no-inline-styles */}
+          <div className={`${styles.heroText} ${styles.heroTextCard} glass`} style={{ '--parallax-y': 'calc(var(--parallax-offset) * -0.5)' } as React.CSSProperties}>
             <span className={styles.sectionLabel}>Since 1973</span>
             <h1 className={styles.heroTitle}>
-              Instruments & <span className={styles.accent} style={{ color: CHAPTERS[0].color }}>Control.</span>
+              Instruments & {/* eslint-disable-next-line react/no-inline-styles */}
+              <span className={styles.accent} style={{ '--accent-color': CHAPTERS[0].color } as React.CSSProperties}>Controls.</span>
             </h1>
             <p className={styles.heroSubtitle}>
               Manufacturing high-performance transformer protection and monitoring solutions for the global energy sector.
@@ -84,7 +87,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.productShowcase}>
-            <div className="float" style={{ position: 'relative', width: '100%', height: '100%', minHeight: '500px' }}>
+            <div className={`float ${styles.floatContainer}`}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={heroIndex}
@@ -99,10 +102,9 @@ export default function Home() {
                     alt="Technical Showcase"
                     width={700}
                     height={700}
-                    className={styles.heroImage}
+                    className={`${styles.heroImage} ${styles.imageObjectFit}`}
                     priority
                     unoptimized
-                    style={{ objectFit: 'contain' }}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -126,8 +128,10 @@ export default function Home() {
 
           <div className="container">
             <div className={`${styles.chapterGrid} reveal-on-scroll`}>
-              <div className={`${styles.chapterInfo} ${styles.chapterInfoCard} glass`} data-parallax="0.08" style={{ transform: 'translateY(calc(var(--parallax-offset) * -1))' }}>
-                <span className={styles.sectionLabel} style={{ color: chapter.color }}>{chapter.tagline}</span>
+              {/* eslint-disable-next-line react/no-inline-styles */}
+              <div className={`${styles.chapterInfo} ${styles.chapterInfoCard} glass`} data-parallax="0.08" style={{ '--parallax-y': 'calc(var(--parallax-offset) * -1)' } as React.CSSProperties}>
+                {/* eslint-disable-next-line react/no-inline-styles */}
+                <span className={styles.sectionLabel} style={{ '--accent-color': chapter.color } as React.CSSProperties}>{chapter.tagline}</span>
                 <h2 className={styles.chapterTitle}>{chapter.title}</h2>
                 <p className={styles.heroSubtitle}>{chapter.description}</p>
 
@@ -138,12 +142,13 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className={styles.heroActions} style={{ marginTop: '2rem' }}>
+                <div className={`${styles.heroActions} ${styles.heroActionsSpaced}`}>
                   <Link href={`/products?id=${chapter.id}`} className={`${styles.btnOutline} glass`}>Technical Specs</Link>
                 </div>
               </div>
 
-              <div className={styles.chapterImageContainer} data-parallax="0.12" style={{ transform: 'translateY(var(--parallax-offset))' }}>
+              {/* eslint-disable-next-line react/no-inline-styles */}
+              <div className={styles.chapterImageContainer} data-parallax="0.12" style={{ '--parallax-y': 'var(--parallax-offset)' } as React.CSSProperties}>
                 <div className="float">
                   <Image
                     src={chapter.image}

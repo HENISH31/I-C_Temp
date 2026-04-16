@@ -31,10 +31,10 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link href="/" className={styles.logo}>
                         <Image
-                            src="/ic_logo.png"
+                            src="/logo.png"
                             alt="Instruments & Controls"
-                            width={180}
-                            height={70}
+                            width={280}
+                            height={110}
                             className={styles.logoImg}
                             priority
                             unoptimized

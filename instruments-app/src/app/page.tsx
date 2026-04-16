@@ -88,14 +88,14 @@ export default function Home() {
           </div>
           <div className={styles.productShowcase}>
             <div className={`float ${styles.floatContainer}`}>
-              <AnimatePresence mode="wait">
+              <AnimatePresence>
                 <motion.div
                   key={heroIndex}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                  style={{ position: 'absolute', width: '100%', height: '100%' }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1.2, ease: "easeInOut" }}
+                  style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }}
                 >
                   <Image
                     src={heroImages[heroIndex]}

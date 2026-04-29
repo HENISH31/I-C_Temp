@@ -6,7 +6,7 @@ import styles from "./about.module.css";
 
 // ── Real company data from IndiaMART ──────────────────────────────────────────
 const TEAM = [
-    { name: "Manoj Mody", role: "Co-Founder & Director", qual: "B.E.Mechanical engineer", emoji: "👷" },
+    { name: "Manoj Mody", role: "Founder & Proprietor", qual: "B.E.Mechanical engineer", emoji: "👷" },
     { name: "Manjula Manoj Mody", role: "CEO", qual: "B.E. (Mechanical)", emoji: "🎯" }
 ];
 

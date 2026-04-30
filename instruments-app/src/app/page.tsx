@@ -75,11 +75,11 @@ export default function Home() {
           <div className={`${styles.heroText} ${styles.heroTextCard} glass`} style={{ '--parallax-y': 'calc(var(--parallax-offset) * -0.5)' } as React.CSSProperties}>
             <span className={styles.sectionLabel}>Since 1973</span>
             <h1 className={styles.heroTitle}>
-              Instruments <br />
+              INSTRUMENTS <br />
               {/* eslint-disable-next-line react/no-inline-styles */}
               <span style={{ display: 'inline-block', marginLeft: '1.8em' }}>&</span> <br />
               {/* eslint-disable-next-line react/no-inline-styles */}
-              <span className={styles.accent} style={{ '--accent-color': CHAPTERS[0].color } as React.CSSProperties}>Controls.</span>
+              <span className={styles.accent} style={{ '--accent-color': CHAPTERS[0].color } as React.CSSProperties}>CONTROLS.</span>
             </h1>
             <p className={styles.heroSubtitle}>
               Manufacturing high-performance transformer protection and monitoring solutions for the global energy sector.
